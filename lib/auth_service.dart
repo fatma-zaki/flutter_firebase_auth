@@ -31,7 +31,7 @@ class AuthService extends ChangeNotifier {
   }
 
   Future<void> logout() async {
-    await _auth.currentUser?.delete();
+    
     await _auth.signOut();
     await _googleSignIn.signOut();
   }
